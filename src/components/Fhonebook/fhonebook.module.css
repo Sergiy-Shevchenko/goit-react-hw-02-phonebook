@@ -24,15 +24,36 @@
 .inputName { 
     font-size: 16px;
     font-weight:500;
-     margin-bottom: 5px;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 .input {
     display: block;
+    margin-top: 5px;
     margin-right: auto;
-} 
+    margin-bottom: 20px;
+}   
 .button {
     display: block;
-    margin-top: 20px;
+ 
 }
-/* .contact__item{} */
-/* .contact__name{} */
+/*.contactItem{} */
+
+.contactItem{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight:500;
+    margin-bottom: 5px;
+} 
+
+.contacName,
+.contacNumder {
+    margin: 0px;
+
+}
+
+/* .contacNumder {
+    margin-left: 10px;
+    margin-right: 10px;
+} */
