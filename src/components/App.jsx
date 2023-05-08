@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import ContactsForm from "./Fhonebook/ContactsForm"
-import ContactsList from "./Fhonebook/ContactsList";
-import { Filter } from "./Fhonebook/Filter";
-import css from './Fhonebook/fhonebook.module.css';
+import ContactsForm from "./ContactForm/ContactsForm";
+import {ContactsList} from "./ComtactList/ContactsList";
+import {Filter}  from "./Filter/Filter";
+import css from './Styles/Styles.module.css';
 import { nanoid } from "nanoid";
 
 
@@ -27,7 +27,13 @@ class App extends Component {
     this.setState(prevState => ({
       contacts: [newContact, ...prevState.contacts],
     }));
+
   };
+
+  deleteUser = (contactId) => {
+    this.setState((prevState) => 
+    ({contacts: prevState.contacts.filter(({id}) => id !== contactId)}))};
+
 
   changeFilter = event => {
     this.setState({filter: event.currentTarget.value});
@@ -48,7 +54,7 @@ const visibleContact = this.state.contacts.filter(contact =>
         <h2 className={css.title}>Contacts</h2>
         <h3 className={css.inputName}>Find contacts by name</h3>
         <Filter value={this.filter} onChange={this.changeFilter}/>
-        <ContactsList contacts={visibleContact} />
+        <ContactsList contacts={visibleContact} deleteUserProps={this.deleteUser}/>
         </div>
     );
   }

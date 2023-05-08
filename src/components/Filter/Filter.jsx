@@ -1,5 +1,6 @@
 import React from "react"
-import css from './fhonebook.module.css';
+import PropTypes from 'prop-types';
+import css from './Filter.module.css';
 
 
 
@@ -18,7 +19,10 @@ export const Filter = ({value, onChange}) => {
     );
 } 
 
-
+Filter.propTypes = {
+    value: PropTypes.string.isRequired, 
+    onChange: PropTypes.func.isRequired,
+}
 
 
 

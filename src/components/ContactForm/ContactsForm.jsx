@@ -1,7 +1,6 @@
-import React, {Component} from "react";
-import css from './fhonebook.module.css';
-import { nanoid } from "nanoid";
-import { ArrayType } from "proptype";
+import {Component} from "react";
+import css from './ContactForm.module.css'
+
 
 
 class ContactsForm extends Component {
@@ -11,12 +10,13 @@ class ContactsForm extends Component {
   };
 
   handleChange = ({target: {name, value}}) => {
-    // console.log(currentTarget.value);
     this.setState({ [name]: value });
+    console.log(this.state)
   };
 
   hendleSubmit = event => {
     event.preventDefault();
+    
     this.props.addContactProps({ ...this.state });
     console.log(this.state);
 

@@ -1,17 +1,12 @@
-
-
-
-
 .container {
     width: 350px;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
 }
-/* .section {} */
+
 .title {
-    font-size: 24px;
-    
+    font-size: 24px;    
 }
 
 .form {
@@ -47,13 +42,6 @@
     margin-bottom: 5px;
 } 
 
-.contacName,
-.contacNumder {
+.contacName {
     margin: 0px;
-
 }
-
-/* .contacNumder {
-    margin-left: 10px;
-    margin-right: 10px;
-} */
