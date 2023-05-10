@@ -23,9 +23,6 @@ class App extends Component {
       ...nameData,
     };
 
-    console.log(newContact);
-    console.log(this.state.contacts.filter(contact => contact.name));
-
     const { contacts } = this.state;
     const notmalizeNewContact = newContact.name.toLocaleLowerCase();
     if (newContact.name === '') {
