@@ -63,7 +63,7 @@ class App extends Component {
     return (
       <div className={css.container}>
         <h1 className={css.title}>Phonebook</h1>
-        <ContactsForm addContactProps={this.addContact} />
+        <ContactsForm addContactProps={this.addContact} reset={this.reset} />
         <h2 className={css.title}>Contacts</h2>
         <h3 className={css.inputName}>Find contacts by name</h3>
         <Filter value={this.filter} onChange={this.changeFilter} />

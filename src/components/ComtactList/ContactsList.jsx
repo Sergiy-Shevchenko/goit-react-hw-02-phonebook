@@ -8,10 +8,10 @@ export const ContactsList = ({ contacts, deleteUserProps }) => {
     <div className={css.section}>
       <ul className={css.contacList}>
         {contacts.map(({ name, number, id }) => (
-          <li className={css.contactItem} key={id}>            
+          <li className={css.contactItem} key={id}>
             <p className={css.contacName}>
-               <AddIcon fill=''/>             
-                {name}: {number}
+              <AddIcon />
+              {name}: {number}
             </p>
             <button type="button" onClick={() => deleteUserProps(id)}>
               Delete
